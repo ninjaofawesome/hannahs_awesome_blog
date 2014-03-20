@@ -9,8 +9,12 @@ class PostsController < ApplicationController
 
 	def create
 		 @post = Post.new(params[:posts])
-		 @post.save
-		 redirect_to @post
+		if @post.save
+			 redirect_to @post
+		else
+			render 'new'
+		end
+
 	end
 
 	def show
@@ -18,9 +22,18 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		@post = Post.find(params[:id])
 	end
 
 	def update
+		@post = Post.find(params[:id])
+
+		if @post.update(params[:posts].permit(:title, :text))
+			redirect_to @post
+		else
+			render 'edit'
+		end
+
 	end
 
 	def delete
