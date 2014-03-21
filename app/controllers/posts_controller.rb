@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_filter :authenticate_user!
 
 	def index 
 		@posts = Post.all
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
 
 	end
 
-	def show
+	def show	
 		@posts = Post.all
 		@post = Post.find(params[:id])
 	end
@@ -43,7 +44,8 @@ class PostsController < ApplicationController
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
-		redirect_to posts_path
+		redirect_to '/posts/:id'
+
 	end
 end
 
