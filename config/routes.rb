@@ -6,7 +6,9 @@ HannahsAwesomeBlog::Application.routes.draw do
 
   root :to => "posts#index"
 
-  match '/users', to: 'posts#new'
+  match '/hello', to: 'posts#new'
+
+  
 
   
   

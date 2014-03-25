@@ -2,8 +2,11 @@
 
 This is a rails blog that I created to illustrate my knowledge of how rails works.  I divided this project up into three sections that I blogged about, one on how to set up the blog, the second on how to add security features and the third on styling the front end.  You can see the blog posts here:
 
-FIRST POST:
+FIRST POST-SETUP:
 http://anunorderedlistapart.tumblr.com/post/80272804821/a-blog-on-steroids-souping-up-your-first-rails-blog
+
+SECOND POST-SECURITY:
+http://anunorderedlistapart.tumblr.com/post/80675953162/a-blog-on-steroids-on-devise-or-fort-knox
 
 
 == May I Use This?
