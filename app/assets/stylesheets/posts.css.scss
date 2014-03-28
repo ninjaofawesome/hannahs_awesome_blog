@@ -9,11 +9,25 @@ $warm-gray: #838383;
 $charcoal: #494949;
 $black: #000000;
 
+//fonts
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src:font-url('/fonts/bebasneue/bebasneue-webfont.eot');
+  src:font-url('/fonts/bebasneue/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/bebasneue/bebasneue-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/bebasneue/bebasneue-webfont.woff') format('woff'),
+      font-url('/fonts/bebasneue/bebasneue-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 //General
 
 body {
 	background-color: $almond;
 	color: $charcoal;
+  font-weight: 300;
 }
 
 input[type="file"], input[type="image"], input[type="submit"], input[type="reset"], input[type="button"], input[type="radio"], input[type="checkbox"]{
@@ -22,7 +36,12 @@ input[type="file"], input[type="image"], input[type="submit"], input[type="reset
 }
 
 //Words
+b {
+  font-weight: 500;
+}
+
 h1.title {
+  font-family: 'Bebas Neue', Helvetica, Arial, sans serif;
 	color: $charcoal;
 	font-size: 500%;
 	text-align: center;
@@ -31,10 +50,12 @@ h1.title {
 }
 
 h1,h2,h3,h4,h5,h6{
+  font-family: 'Bebas Neue', Helvetica, Arial, sans serif;
 	color: $charcoal;
 }
 
 h1.post-title {
+  font-family: 'Bebas Neue', Helvetica, Arial, sans serif;
 	color: $charcoal;
 	text-align: center;
 
