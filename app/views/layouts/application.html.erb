@@ -7,15 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class = "container">
+	<div class = "row">
+		<div class = "span12">
+		<% if user_signed_in? %>
+		  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+		   <p class="notice"><%= notice %></p>
+		       <p class="alert"><%= alert %></p>    
+		<% end %>
 
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
-<% end %>
-
-	 <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-<%= yield %>
+		</div>
+		<div class = "span12">
+			<%= yield %>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

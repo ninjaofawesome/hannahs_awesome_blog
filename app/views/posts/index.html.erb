@@ -1,8 +1,18 @@
-<h1>Welcome to Hannah's Awesome Blog!</h1>
-<ul>
- <%= @posts.each do |post| %>
- 	<li><%= post.title %></li>
- 	<li><%= post.text %></li>
- <% end %>
-</ul>
+<div class = "row">
+	<div class = "span12">
+		<h1 class="title">Hannah's Awesome Blog</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="span10 offset1">
+		<ul class="index">
+		 <%= @posts.each do |post| %>
+		 	<li><h1 class="post-title"><%= post.title %></h1></li>
+		 	<li><%= post.text %></li>
+		 <% end %>
+		</ul>
+	</div>
+</div>
+
+
 

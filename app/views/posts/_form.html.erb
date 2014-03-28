@@ -1,15 +1,15 @@
 <%= form_for :posts, url: {action: 'create'} do |f| %>
   <p>
-    <%= f.label :title %><br>
+    <h3><%= f.label :title %></h3>
     <%= f.text_field :title %>
   </p>
  
   <p>
-    <%= f.label :text %><br>
+    <h3><%= f.label :text %></h3>
     <%= f.text_area :text %>
   </p>
  
   <p>
-    <%= f.submit 'Submit' %>
+    <button class="btn-primary"<%= f.submit %>Submit</button>
   </p>
 <% end %>
